@@ -46,6 +46,7 @@ public partial class GetCategories : System.Web.UI.Page
                                 + "' ";
       
         }
+		/*
 		MySqlConnection cn = new MySqlConnection(cnString);
         MySqlDataAdapter dr = new MySqlDataAdapter(sqlstring, cn);
 		
@@ -110,7 +111,8 @@ public partial class GetCategories : System.Web.UI.Page
             dr.SelectCommand.Dispose();
             dr.Dispose();
         }
-
+*/
+Response.Write("table>");
         Response.Cache.SetCacheability(System.Web.HttpCacheability.NoCache);
     }
 }
