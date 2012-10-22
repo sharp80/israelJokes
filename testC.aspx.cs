@@ -15,9 +15,8 @@ public partial class test : System.Web.UI.Page
 
     protected void Page_Load(object sender, EventArgs e)
     {
-	    Response.Write("test222");
 
-		/*String version = Request.QueryString["version"];
+		String version = Request.QueryString["version"];
 		String AppId = Request.QueryString["AppId"]; // TODO - not needed for now
 
 		string sqlstring ;
@@ -52,7 +51,7 @@ public partial class test : System.Web.UI.Page
             dr.Dispose();
             cn.Close();
         }
-*/
+
         Response.Cache.SetCacheability(System.Web.HttpCacheability.NoCache);
     }
 }
