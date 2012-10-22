@@ -12,7 +12,6 @@ using System.Data;
 public partial class GetCategories : System.Web.UI.Page
 {
 //    protected string cnString = "Data Source=localhost; DataBase=jokes; User ID=jokes_user; Password=jokesuser1; ";
-    protected string cnString = "Data Source=localhost; DataBase=jokes; User ID=jokes_user; Password=jokesuser1; ";
    protected string cnString = "server=fb6a5a0b-b681-4e41-8f5e-a07501561d4d.mysql.sequelizer.com;database=dbfb6a5a0bb6814e418f5ea07501561d4d;uid=qynlpebmiicoqgjk;pwd=LB3SWR5n5DfBJN7i6fb6e2XbL5BodrVzm4XhCwK38uDSMM57v3YL8MZSM2g2oQiM";
    
     protected void Page_Load(object sender, EventArgs e)
