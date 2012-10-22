@@ -16,6 +16,7 @@ public partial class GetCategories : System.Web.UI.Page
    
     protected void Page_Load(object sender, EventArgs e)
     {
+	/*
         string action = Request.QueryString["id"];
 		if (action != null)
 		{
@@ -46,6 +47,7 @@ public partial class GetCategories : System.Web.UI.Page
                                 + "' ";
       
         }
+		*/
 		/*
 		MySqlConnection cn = new MySqlConnection(cnString);
         MySqlDataAdapter dr = new MySqlDataAdapter(sqlstring, cn);
