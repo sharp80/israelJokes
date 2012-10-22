@@ -114,7 +114,7 @@ public partial class GetCategories : System.Web.UI.Page
             dr.Dispose();
         }
 */
-Response.Write("table>");
+Response.Write("table1>");
         Response.Cache.SetCacheability(System.Web.HttpCacheability.NoCache);
     }
 }
