@@ -42,7 +42,7 @@ public partial class NewUserSession: System.Web.UI.Page
 		}
 		catch (Exception _Exception)
 		{
-			//Response.Write(_Exception.ToString());
+			Response.Write(_Exception.ToString());
 			//lblOutput.Text =_Exception.ToString();
 		}
 		finally
