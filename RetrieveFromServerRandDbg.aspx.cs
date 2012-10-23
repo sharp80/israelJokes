@@ -13,7 +13,7 @@ using System.Configuration;
 
 public partial class RetrieveFromServerRand : System.Web.UI.Page
 {
-    protected string cnString = ConfigurationSettings.AppSettings["connectionstring"].ToString();
+    protected string cnString ;
 
     public enum eShowJokes
     {
@@ -22,6 +22,8 @@ public partial class RetrieveFromServerRand : System.Web.UI.Page
     };
     protected void Page_Load(object sender, EventArgs e)
     {
+		cnString = ConfigurationSettings.AppSettings["connectionstring"].ToString();
+	
 		string action = Request.QueryString["action"];
         
         string categoryId = Request.QueryString["CategoryId"];

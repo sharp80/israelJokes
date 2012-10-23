@@ -14,16 +14,18 @@ using MySql.Data.MySqlClient;
 using System.Data.Odbc;
 using System.Net.Mail;
 using System.IO;
+using System.Configuration;
 
 public partial class MyWebForm3 : System.Web.UI.Page
 {
-	protected string cnString = "Data Source=localhost; DataBase=jokes; User ID=jokes_user; Password=jokesuser1; charset=hebrew;";
+    protected string cnString ;
     protected string FROM_EMAIL_ADDRESS = "support@mayaron.com";
     protected string ADMIN_TO_EMAIL_ADDRESS = "elad.fiul@gmail.com";
     protected string FilePath = @"d:\inetpub\vhosts\mayaron.com\httpdocs\jokes\App_Data";
 	
 	private void Page_Load(object sender, System.EventArgs e)
 	{
+		cnString = ConfigurationSettings.AppSettings["connectionstring"].ToString();
 		lblOutput.Text = "hello";
         Response.Cache.SetCacheability(System.Web.HttpCacheability.NoCache);
 

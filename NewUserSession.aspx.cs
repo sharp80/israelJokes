@@ -9,16 +9,18 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Web.UI.HtmlControls;
 using MySql.Data.MySqlClient;
+using System.Configuration;
 
 
 using System.Data.Odbc;
 
 public partial class NewUserSession: System.Web.UI.Page
 {
-	protected string cnString = "Data Source=localhost; DataBase=jokes; User ID=jokes_user; Password=jokesuser1; charset=hebrew;";
+    protected string cnString ;
 	
 	private void Page_Load(object sender, System.EventArgs e)
 	{
+		cnString = ConfigurationSettings.AppSettings["connectionstring"].ToString();
         Response.Cache.SetCacheability(System.Web.HttpCacheability.NoCache);
 
 		string UserId = Request.QueryString["UserId"];

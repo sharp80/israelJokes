@@ -7,14 +7,17 @@ using System.Web.UI.WebControls;
 
 using MySql.Data.MySqlClient;
 using System.Data;
+using System.Configuration;
 
 
 public partial class AddJokeToFav : System.Web.UI.Page
 {
-    protected string cnString = "Data Source=localhost; DataBase=jokes; User ID=jokes_user; Password=jokesuser1; ";
+    protected string cnString ;
 
     protected void Page_Load(object sender, EventArgs e)
     {
+		cnString = ConfigurationSettings.AppSettings["connectionstring"].ToString();
+
         string JokeId = Request.QueryString["jokeId"];
 		string UserId = Request.QueryString["UserId"];
 		string AddToFavorite = Request.QueryString["AddToFavorite"];
