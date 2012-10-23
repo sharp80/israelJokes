@@ -13,11 +13,13 @@ using System.Configuration;
 public partial class ShowAllCategories : System.Web.UI.Page
 {
   //  protected string cnString = "Data Source=localhost; DataBase=jokes; User ID=jokes_user; Password=jokesuser1; ";
-    protected string cnString = ConfigurationSettings.AppSettings["connectionstring"].ToString();
+    protected string cnString ;
 
 
     protected void Page_Load(object sender, EventArgs e)
     {
+		cnString  = ConfigurationSettings.AppSettings["connectionstring"].ToString();
+
 		String version = Request.QueryString["version"];
 		String AppId = Request.QueryString["AppId"]; // TODO - not needed for now
 
