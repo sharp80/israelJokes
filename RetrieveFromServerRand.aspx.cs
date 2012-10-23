@@ -8,11 +8,12 @@ using System.Web.UI.WebControls;
 using MySql.Data.MySqlClient;
 using System.Data;
 using Newtonsoft.Json;
+using System.Configuration;
 
 
 public partial class RetrieveFromServerRand : System.Web.UI.Page
 {
-    protected string cnString = "Data Source=localhost; DataBase=jokes; User ID=jokes_user; Password=jokesuser1; ";
+    protected string cnString ;
     public enum eShowJokes
     {
         SHOW_UNREAD_JOKES,
@@ -21,6 +22,8 @@ public partial class RetrieveFromServerRand : System.Web.UI.Page
     };
     protected void Page_Load(object sender, EventArgs e)
     {
+		cnString = ConfigurationSettings.AppSettings["connectionstring"].ToString();
+
 		string action = Request.QueryString["action"];
         
         string categoryId = Request.QueryString["CategoryId"];
