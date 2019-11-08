@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <style name="MyNoTitleTheme" parent="android:style/Theme.NoTitleBar">
-        <item name="android:textColor">@color/black</item>
-    </style>
-     <style name="customThemeTitle" parent="android:style/Theme.Dialog"> 
-        <item name="android:windowTitleBackgroundStyle">@style/WindowTitleBackground</item> 
-    </style> 
-</resources>
