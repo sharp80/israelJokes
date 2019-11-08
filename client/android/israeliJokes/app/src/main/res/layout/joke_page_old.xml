@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:background="#ffffff"
+    android:baselineAligned="false"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/JokeTopPanel"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/top"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <Button
+                android:id="@+id/ToCategories"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/home"
+                android:textSize="10dp" >
+            </Button>
+
+            <ImageView
+                android:id="@+id/ToCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="5dp" >
+            </ImageView>
+
+            <Button
+                android:id="@+id/ReportJokeBtn"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/attn128"
+                android:gravity="center_horizontal"
+                android:textSize="10dp" >
+            </Button>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <com.google.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/JokeTopPanel"
+        ads:adSize="BANNER"
+        ads:adUnitId="a14f23b587e984b"
+        ads:loadAdOnCreate="true"
+        ads:testDevices="TEST_EMULATOR" />
+
+    <LinearLayout
+        android:id="@+id/JokeTitle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/adView"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:weightSum="10" >
+
+        <ImageView
+            android:id="@+id/GlobalGravityIcon"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/JokeTitle"
+            android:layout_weight="2"
+            android:src="@drawable/align_right" />
+
+        <TextView
+            android:id="@+id/JokeTitleString"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="8"
+            android:background="@drawable/joke_back"
+            android:gravity="left"
+            android:padding="3dp"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textSize="16dp" />
+    </LinearLayout>
+
+    <LinearLayout
+		android:id="@+id/containerParent"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/JokeFooter"
+        android:layout_below="@+id/JokeTitle"
+        android:gravity="center_vertical"
+        android:orientation="vertical" >
+
+        <ScrollView
+            android:id="@+id/ScrollView01"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/joke_back"
+            android:fillViewport="true" >
+
+            <LinearLayout
+                android:id="@+id/container"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center|top"
+                android:padding="5dp" 
+                android:orientation="horizontal">
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/JokeFooter"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:paddingBottom="2dp"
+        android:paddingTop="5dp"
+        android:weightSum="1" >
+
+        <Button
+            android:id="@+id/goNext"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="0.2"
+            android:background="@drawable/next_btn_custom" >
+        </Button>
+
+        <Button
+            android:id="@+id/addToFavorites"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="0.2" >
+        </Button>
+
+        <Button
+            android:id="@+id/add_like"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="0.2"
+            android:background="@drawable/add_like_selector" />
+
+        <Button
+            android:id="@+id/share"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="0.2"
+            android:background="@drawable/rss128" />
+
+        <Button
+            android:id="@+id/goBack"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="0.2"
+            android:background="@drawable/prev_btn_custom" >
+        </Button>
+    </LinearLayout>
+
+</RelativeLayout>

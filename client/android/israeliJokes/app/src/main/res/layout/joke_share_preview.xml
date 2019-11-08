@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+  
+  <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/top" >
+    
+       <RelativeLayout 
+           android:id="@+id/share_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/top"
+    android:layout_alignParentTop="true" >
+  <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="122dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="5dp" 
+            android:layout_marginBottom="5dp" 
+            android:src="@drawable/logo_small"
+            android:layout_centerHorizontal="true" 
+            android:layout_alignParentTop="true"/>
+  
+    <TextView
+        	android:id="@+id/share_string"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/joke_back"
+            android:gravity="left"
+            android:padding="3dp"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textSize="16dp"
+            android:text="@string/share_str"
+            android:layout_below="@id/imageView2" />
+    
+      <TextView
+            android:id="@+id/JokeTitleString"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/joke_back"
+            android:gravity="left"
+            android:padding="3dp"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textSize="16dp" 
+            android:layout_below="@id/share_string"/>
+  
+   <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/JokeTitleString"
+        android:gravity="center_vertical"
+        android:orientation="vertical" >
+  
+  <!-- ScrollView
+            android:id="@+id/ScrollView01"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/joke_back"
+            android:fillViewport="true" -->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center|top"
+                android:padding="5dp" >
+
+                <LinearLayout
+                    android:id="@+id/container"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentTop="true"
+                    android:background="@drawable/top"
+                    android:orientation="vertical" >
+
+  </LinearLayout>
+  </RelativeLayout>
+  <!-- /ScrollView-->
+</LinearLayout>
+</RelativeLayout>
+    <LinearLayout 
+        android:layout_alignParentBottom="true"
+        android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="horizontal" 
+	    android:background="@drawable/top" 
+	    android:gravity="center_horizontal"
+	    android:weightSum="1"
+	    >
+
+        <Button
+            android:id="@+id/cancel"
+            android:layout_weight="0.5"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:text="@string/cancel" />
+
+        <Button
+            android:id="@+id/footer_share_btn"
+            android:layout_weight="0.5"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:text="@string/share_btn"/>
+
+	</LinearLayout>
+	
+</RelativeLayout>
