@@ -51,7 +51,7 @@ public partial class GetConfiguration : System.Web.UI.Page
 			Response.Write("\"YoutubPrefixForFacebook\":\"https://www.youtube.com/v/\",");
 			
 			Response.Write("\"ImagesUrlPrefix\":\"http://israelijokes.mayaron.com/images/imagesstack/\",");
-			Response.Write("\"SiteUrlPrefix\":\"http://israelijokes.mayaron.com/\",");
+			Response.Write("\"SiteUrlPrefix\":\"https://israelijokes.apphb.com/server/\",");
 			Response.Write("\"IconsUrlPrefix\":\"http://israelijokes.mayaron.com/images/icons/\"");
 
 			
