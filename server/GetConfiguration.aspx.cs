@@ -52,8 +52,8 @@ public partial class GetConfiguration : System.Web.UI.Page
 			
 			Response.Write("\"ImagesUrlPrefix\":\"http://israelijokes.mayaron.com/images/imagesstack/\",");
 			Response.Write("\"SiteUrlPrefix\":\"https://israelijokes.apphb.com/server/\",");
-			Response.Write("\"IconsUrlPrefix\":\"http://israelijokes.mayaron.com/images/icons/\"");
-
+			//Response.Write("\"IconsUrlPrefix\":\"http://israelijokes.mayaron.com/images/icons/\"");
+			Response.Write("\"IconsUrlPrefix\":\"https://israelijokes.apphb.com/server/fb/images/icons/\"");	
 			
 			Response.Write("}");
 		}
