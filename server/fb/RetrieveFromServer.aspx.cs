@@ -83,7 +83,8 @@ public partial class RetrieveFromServer : System.Web.UI.Page
                 break;
 
             case "debug":
-                sqlstring = "SELECT * FROM jokes where id = " + lastJokeId;
+                //sqlstring = "SELECT * FROM jokes where id = " + lastJokeId;
+				sqlstring = "DELETE FROM favorites where favorites.userId = ELAD_TEST2";
                 break;
 
             case "specific_list":
