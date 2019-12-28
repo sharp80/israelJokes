@@ -138,7 +138,7 @@ public partial class RetrieveFromServerRand : System.Web.UI.Page
         }
 	//	sqlstring = "SELECT " + SelectFieldsOuter + " from JokesDl WHERE userId='" + userId + "'";
 			
-       //Response.Write(sqlstring);
+		Response.Write(sqlstring);
         //return;
 		//sqlstring = "SELECT headline, joke, pic, categoryId, id, rating, video , favorites.JokeId as Fav FROM (SELECT headline, joke, pic, categoryId, id, StarRating as rating, video FROM jokes WHERE id NOT IN (SELECT JokeId from JokesDl WHERE userId='5fede259-bc40-3589-a885-e8a3387ab59a') AND categoryId=24 AND status='Active' ORDER BY RAND() LIMIT 1 ) as jokes left join favorites on jokes.id = favorites.JokeId and favorites.userId='5fede259-bc40-3589-a885-e8a3387ab59a'";
         MySqlConnection cn = new MySqlConnection(cnString);
